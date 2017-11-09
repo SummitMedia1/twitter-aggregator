@@ -25,6 +25,9 @@ $('body').keypress(function(e){
 				if (response.login === 'success') {
 					alert("You have logged in as " + username + ".");
 					console.log("You have logged in as " + username + ".");
+
+					localStorage.setItem('logged', true);
+
 					window.location = "/";
 				} else {
 					alert("Invalid username or password.");
