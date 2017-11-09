@@ -11,6 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(express.static("front-end"));
+
+app.get("/", function(req, res) {
+	res.sendFile("index.html");
+});
+
 require("./routes/password-controller.js")(app);
 
 

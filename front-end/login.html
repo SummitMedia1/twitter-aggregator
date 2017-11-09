@@ -38,8 +38,10 @@
   <div class="col s12 center">
     <h3>Curiosity</h3>
 
-    <h5 >Sign-up Now!</h5>
+    <h5 >Login to your profile</h5>
   </div>
+  
+
 </div>
 </div>
 <div class="container box">
@@ -49,36 +51,29 @@
     <div class="row ">
         <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">PrettyVondy69</label>
+            <input id="username" type="text" class="validate" style="color: black !important;">
+            <label for="username">Username</label>
         </div>
     </div>
 
-    <div id="nomargin" class="row ">
-        <div class="input-field col s12">
+    <div class="row ">
+        <div id="nomargin"  class="input-field col s12">
             <i class="material-icons prefix">vpn_key</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Password</label>
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
         </div>
+
     </div>
-    <div class="row">
-        <div class="check col s4">
-            <input type="checkbox" id="test6" />
-            <label for="test6">Subscribed</label>
-        </div>
-        <div class="check col s4" id="admin">
-            <input type="checkbox" id="test5" />
-            <label for="test5">Admin</label>
-           
-
-        </div>
-        <div class="check col s4 right  ">
-            
-            <button id="submitSignup" class="btn btn-small waves-effect waves-purple">Login</button>
-
+    <div class="row ">
+      <div class="check col s4  right ">
+            <button id="submitLogin" class="btn btn-small waves-effect waves-purple">Login</button>
         </div>
     </div>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
 </main>
 
     <footer class="page-footer">
@@ -110,13 +105,14 @@
            
             <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon"></a>
             </div>
+          </div>
         </footer>
-            
 
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript" src="js/port.js"></script>
+        <script type="text/javascript" src="js/password.js"></script>
 </body>
 
 </html>

@@ -5,10 +5,6 @@ var path = require("path");
 //exports to server.js
 module.exports = function(app) {
 
-	app.get("/home", function(req, res) {
-		res.sendFile(path.join(__dirname, "../", "test.html"));
-	});
-
 	// request a password check for given user
 	app.get("/login/:user", function(req, res) {
 
