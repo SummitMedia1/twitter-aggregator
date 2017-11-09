@@ -31,3 +31,4 @@ module.exports = hasher;
 // user - spiderman   :   password2
 // user - iron man    :   password
 // user - mario       :   supermariobros
+// user - thor        :   myhammer
