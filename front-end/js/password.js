@@ -20,6 +20,7 @@ $(function() {
 				if (response.login === 'success') {
 					alert("You have logged in as " + username + ".");
 					console.log("You have logged in as " + username + ".");
+					window.location = "/";
 				} else {
 					alert("Invalid username or password.");
 					console.log("Invalid username or password.");
@@ -38,7 +39,7 @@ $(function() {
 			var username = $("#username2").val();
 			var password = $("#password2").val();
 			var sub = $('#sub').prop('checked');
-			var admin = $('#admin').prop('checked');
+			var admin = $('#admin1').prop('checked');
 
 			if (username === '' || password === '') {
 				alert("Please fill in both username and password.");
@@ -57,6 +58,7 @@ $(function() {
 			}).done(function(response) {
 				if (response.created === 'success') {
 					alert("You have created account " + username + ".");
+					window.location = "/";
 				}
 				 if (response.created === 'failed') {
 					alert("There is already a user with that name.");
