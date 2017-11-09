@@ -75,7 +75,8 @@ input[type=text]:not(.browser-default) {
    
     color: #FDAB20;
    }
-.buttons #signBtn, .buttons #logBtn, a #signBtn, a #logBtn {
+.buttons #signBtn, .buttons #logBtn, .buttons #logOut,
+ a #signBtn, a #logBtn, a #logOut {
   z-index: 1000;
   margin-top: 10px;
   margin-right: 10px;

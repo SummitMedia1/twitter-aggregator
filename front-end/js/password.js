@@ -1,8 +1,9 @@
 $(function() {
 $('body').keypress(function(e){
-      if(e.keyCode==13)
+      if(e.keyCode==13) {
     	$('#submitLogin').click();
   		$('#submitSignup').click();
+  		}
     });
 
 		$("#submitLogin").on("click", function(event) {
