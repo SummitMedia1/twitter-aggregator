@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Test</title>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+	<br/>
+	<br/>
+	<br/>
+	<div class='container'>
+		<div class="container form-holder">
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="col offset-s1">
+							<button class="login btn-floating btn-large waves-effect waves-light red">Log-in!</button>
+						</div>
+						<div class="input-field col s4">
+							<input id="username" type="text">
+							<label for="username">Username</label>
+						</div>
+						<div class="input-field col s4">
+							<input id="password" type="password">
+							<label for="password">Password</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+
+		<div class='container'>
+		<div class="container form-holder">
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<h4>New</h4>
+						<div class="col offset-s1">
+							<button class="add btn-floating btn-large waves-effect waves-light red">Add!</button>
+						</div>
+						<div class="input-field col s3">
+							<input id="username2" type="text">
+							<label for="username2">Username</label>
+						</div>
+						<div class="input-field col s3">
+							<input id="password2" type="password">
+							<label for="password2">Password</label>
+						</div>
+						<p>
+							<input type="checkbox" id="sub" />
+							<label for="sub">Subscribed</label>
+						</p>
+						<p>
+							<input type="checkbox" id="admin" />
+							<label for="admin">Admin</label>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+
+</body>
+<script>
+	$(function() {
+
+		$(".login").on("click", function(event) {
+			event.preventDefault();
+
+			var username = $("#username").val();
+			var password = $("#password").val();
+
+			if (username === '' || password === '') {
+				alert("Please fill in both username and password.");
+				return;
+			}
+
+			$.ajax({
+				type: "GET",
+				url: "/login/" + username,
+				data: {value: password}
+			}).done(
+			function(response) {
+				if (response.login === 'success') {
+					alert("You have logged in as " + username + ".");
+					console.log("You have logged in as " + username + ".");
+				} else {
+					alert("Invalid username or password.");
+					console.log("Invalid username or password.");
+				}
+			}).fail(function(xhr, status, error) {
+				alert("There is no user named " + username + ".");
+				console.log("There is no user named " + username + ".");
+			});
+		});
+
+		//-------------------------------------------------
+
+		$(".add").on("click", function(event) {
+			event.preventDefault();
+
+			var username = $("#username2").val();
+			var password = $("#password2").val();
+			var sub = $('#sub').prop('checked');
+			var admin = $('#admin').prop('checked');
+
+			if (username === '' || password === '') {
+				alert("Please fill in both username and password.");
+				return;
+			}
+
+			$.ajax({
+				type: "POST",
+				url: "/login/new",
+				data: {
+					password: password,
+					username: username,
+					sub: sub,
+					admin: admin
+				}
+			}).done(function(response) {
+				if (response.created === 'success') {
+					alert("You have created account " + username + ".");
+				}
+				 if (response.created === 'failed') {
+					alert("There is already a user with that name.");
+				}
+			}).fail(function(xhr, status, error) {
+				alert("Failed.");
+			});
+		});
+
+	});
+</script>
+
+</html>
