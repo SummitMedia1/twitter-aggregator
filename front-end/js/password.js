@@ -1,10 +1,11 @@
 $(function() {
-$('body').keypress(function(e){
-      if(e.keyCode==13) {
-    	$('#submitLogin').click();
-  		$('#submitSignup').click();
-  		}
-    });
+	
+	$('body').keypress(function(e){
+		if(e.keyCode==13) {
+			$('#submitLogin').click();
+			$('#submitSignup').click();
+		}
+	});
 
 		$("#submitLogin").on("click", function(event) {
 			event.preventDefault();
@@ -23,13 +24,16 @@ $('body').keypress(function(e){
 				data: {value: password}
 			}).done(
 			function(response) {
+				console.log(response);
 				if (response.login === 'success') {
 					alert("You have logged in as " + username + ".");
-					console.log("You have logged in as " + username + ".");
 
 					localStorage.setItem('logged', true);
+					localStorage.setItem('user', response.user);
+					localStorage.setItem('sub', response.sub);
+					localStorage.setItem('admin', response.admin);
 
-					window.location = "/";
+					setTimeout(window.location = "/", 1000);
 				} else {
 					alert("Invalid username or password.");
 					console.log("Invalid username or password.");

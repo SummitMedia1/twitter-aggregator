@@ -22,9 +22,13 @@ module.exports = function(app) {
 				
 			} else {
 				hasher.hashCheck(password, response[0].dataValues.pass_hash, function(data) {
-					console.log(data);
 					if (data === true) {
-						res.send({ login: 'success' });
+						res.send({ 
+							login: 'success',
+							user: response[0].dataValues.username,
+							sub: response[0].dataValues.subscribed,
+							admin: response[0].dataValues.admin,
+						});
 					} else {
 						res.send({ login: 'failed' });
 					}
