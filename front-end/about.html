@@ -15,15 +15,18 @@
 
 <body>
   <main>
+   <div class="parallax-container">
+      <div class="parallax"><img src="./images/team.jpg"></div>
+
 <nav id="content" class="pin-top">
   <div class="nav-wrapper">
     <ul id="nav-mobile">
       <li><a class="btn btn-floating pulse" href="./index.html"><i class="material-icons">menu</i></a></li>
       <li><h5>Home</h5><hr></li>
       <li><input class="right" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search"> </li>
-      <li><a href="#!" class="btn waves-effect waves-purple">Send</a></li>
-                                
-                            
+      <li><a href="./reports.html" class="btn waves-effect waves-purple">Send</a></li>
+
+
        <div class="buttons col 12 right">
       <div>
 
@@ -32,27 +35,20 @@
     </ul>
   </div>
 </nav>
-<br><br><br><br><br>
-<div class="container">
-<div class="row">
-  <div class="col s12 center">
-    <h3>Reports</h3>
-  </div>
-  <!-- Push for loop of data to div under this text -->
-  <!-- Example -->
-  <div class="col s12 box ">
-    <h5>User: <span class="inputgoeshere">data.username</span></h5>
-    <h5>Tweet: <span class="inputgoeshere">data.text</span></h5>
-    <h5>Location: <span class="inputgoeshere">data.location</span></h5>
-    <h5>Followers: <span class="inputgoeshere">data.followers</span></h5>
-    <h5>Tweeted On: <span class="inputgoeshere">data.timestamp</span></h5>
-  </div>
-
-</div>
-    
-</div>
+      <br><br><br><br><br><br>
+        <div class="row">
+          <div class="col s4 offset-l1">
+            <h3 class="center white-text">Curious about the team?</h3>
+            <hr>
+            <p class="white-text">Our team consists of five people who are dedicated to make it easier for people or businesses to understand what people are thinking about specific topics.</p>
+            <p class="white-text">With countless hours of work, we were able to make a application that brings value to the user within a two week time period. With a paid plan to use the Twitter api, the amount of data that we can display for the user could help businesses understand their market better.</p>
+            <p class="white-text left">
+              Contact Us: curious@gmail.com
+            </p>
+          </div>
+        </div>
+    </div>
 </main>
-
     <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -72,22 +68,33 @@
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright
-            <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon"></a> 
-            <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon"></a>
-            <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon"></a>
-            
-            <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon"></a>
-           
-            <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon"></a>
-            </div>
+              <div class="container">
+                  © 2017 Copyright
+                  <div class="row" style="margin-top: 20px">
+                    <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
+                    </a>
+                    <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
+                    </a>
+                    <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
+                    </a>
+
+                    <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
+                    </a>
+
+                    <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
+                    </a>
+                  </div>
+
+              </div>
           </div>
         </footer>
+
+
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript" src="js/port.js"></script>
+        <script type="text/javascript" src="js/loginCheck.js"></script>
 </body>
 
 </html>

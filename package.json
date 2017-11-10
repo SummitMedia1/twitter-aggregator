@@ -1,0 +1,36 @@
+{
+  "name": "twitter-aggregator",
+  "version": "1.0.0",
+  "description": "hashes passwords",
+  "main": "log-in.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Vondy, Mike, Jaron, Brendan, Chris",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "chartjs": "^0.3.24",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "jsonfile": "^4.0.0",
+    "lognext": "0.0.4",
+    "mysql2": "^1.4.2",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "sequelize": "^4.22.6",
+    "twitter": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "twitter-aggregator"
+  },
+  "keywords": [
+    "twitter",
+    "aggregator",
+    "search",
+    "data"
+  ]
+}

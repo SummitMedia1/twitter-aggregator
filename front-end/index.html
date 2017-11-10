@@ -15,39 +15,47 @@
 
 <body>
     <main>
-        <div class="row">
+
+          <div class="row" id="headerImageRow">
             <!-- Sign in buttons -->
             <div class="nav">
-                <div class="buttons col 12 right">
+                <!-- <div class="buttons col 12 right">
                     <div>
                         <a href="./login.html" id="signBtn" class="btn btn-small waves-effect waves-purple">Login</a>
                         <a href="./signup.html" id="logBtn" class="btn btn-small waves-effect waves-purple">Sign-up</a>
                     </div>
-                </div>
+                </div> -->
+
+
                 <!--  Space picture and search bar -->
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="./images/port1.jpg">
-                            <div class="caption center-align">
-                                <h3>Curiosity</h3>
-                                <h5 class="light grey-text text-lighten-3">Are you curious?</h5>
-                                <div input-field>
-                                    <input class="sBar" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search">
-                                </div>
-                                
-                                <a href="#!" class="btn waves-effect waves-purple center">Send</a>
-                                <div class="row adLink">
-                                <a href="./advanced.html" class="white-text ">Advanced Search</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+
+          <div class="caption center-align">
+            <div class="row">
+              <div class="col s8 offset-s2">
+                <img src="./images/logo.png" id="logoImage" style="margin-left: auto; margin-right: auto; width: 70%"/>
+              </div>
+            </div>
+
+            <div class="row">
+                <h5 class="light grey-text text-lighten-3">Are you curious?</h5>
+            </div>
+              <div input-field>
+                  <input class="sBar" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search">
+              </div>
+
+              <a href="./reports.html" class="btn waves-effect waves-purple center">Send</a>
+              <div class="row adLink">
+              <a href="./advanced.html" class="white-text">Advanced Search</a>
+              </div>
+          </div>
+
+
                 </div>
             </div>
         </div>
+
         <!--  Nav bar that comes in when you go down -->
-        <nav id="content" class="pin-top fadein">
+        <nav id="content" class="pin-top" style="overflow: hidden; position: absolute; z-index: 1000">
             <div class="nav-wrapper">
                 <ul id="nav-mobile">
                     <li>
@@ -59,12 +67,12 @@
                     <li>
                       <a href="./about.html">About Us</a>
                     </li>
-                    <li>
-                      <input class="right" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search"> 
+                    <!-- <li>
+                      <input class="right" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search">
                     </li>
                     <li>
-                      <a href="#!" class="btn waves-effect waves-purple">Send</a>
-                    </li>
+                      <a href="./reports.html" class="btn waves-effect waves-purple">Send</a>
+                    </li> -->
                     <div class="buttons col 12 right">
                         <a href="./login.html" id="logNavBtn" class="btn btn-small waves-effect waves-purple">Login</a>
                         <a href="./signup.html" id="signNavBtn" class="btn btn-small waves-effect waves-purple">Sign-up</a>
@@ -82,32 +90,32 @@
                 <div class="col s4 ">
                     <div class="center">
                         <i class=" large material-icons ">all_inclusive</i>
-                        <h2 class="icon ">Tools</h2>
+                        <h3 class="icon ">Tools</h3>
                     </div>
                     <hr>
                 </div>
                 <div class="col s4 ">
                     <div class="center">
                         <i class=" large material-icons ">account_circle</i>
-                        <h2 class="icon ">Profiles</h2>
+                        <h3 class="icon ">Profiles</h3>
                     </div>
                     <hr>
                 </div>
                 <div class="col s4 ">
                     <div class="center">
                         <i class=" large material-icons ">help</i>
-                        <h2 class="icon ">Expand</h2>
+                        <h3 class="icon ">Expand</h3>
                     </div>
                     <hr>
                 </div>
             </div>
           <!-- Descriptions  -->
-            <div class="row">
+            <div class="row" style="position: relative; z-index: -100">
                 <div class="col s4 ">
                     <p class="right">Premium subscribers get tons of new tools to further enhance their Curiosity results!</p>
                 </div>
                 <div class="col s4 ">
-                    <p class="right">Subscribers can create profiles that store their previous searches.</p>
+                    <p class="right">Subscribers can create profiles that let them view more reports.</p>
                 </div>
                 <div class="col s4 ">
                     <p class="right">Learn more about how you can expand your Curiosity with a premium subscriber profile!</p>
@@ -115,11 +123,12 @@
             </div>
           <!-- Cards with pictures -->
             <div class="row">
+              <div class="col s12" style="inline-flex">
                 <div class="col s4">
                     <div class="card">
                         <div class="card-image">
                             <img src="./images/report.jpg">
-                            <span class="card-title">Reports</span>
+                            <span class="card-title" style="padding: 10px">Reports</span>
                         </div>
                         <div class="card-content">
                             <p>See detailed reports.</p>
@@ -133,7 +142,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img src="./images/port2.jpg">
-                            <span class="card-title">Advanced Search</span>
+                            <span class="card-title" style="padding: 10px">Advanced Search</span>
                         </div>
                         <div class="card-content">
                             <p>Find exactly what you need.</p>
@@ -147,7 +156,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img src="./images/aboutus.jpg">
-                            <span class="card-title">About Us!</span>
+                            <span class="card-title" style="padding: 10px">About Us!</span>
                         </div>
                         <div class="card-content">
                             <p>Learn more about the team.</p>
@@ -158,7 +167,8 @@
                     </div>
                 </div>
             </div>
-          
+          </div>
+
       </div><!-- End of container -->
     </main>
     <!-- Footer -->
@@ -186,19 +196,22 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2014 Copyright
-                <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
-                </a>
-                <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
-                </a>
-                <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
-                </a>
+                © 2017 Copyright
+                <div class="row" style="margin-top: 20px">
+                  <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
+                  </a>
 
-                <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
-                </a>
+                  <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
+                  </a>
 
-                <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
-                </a>
+                  <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
+                  </a>
+                </div>
+
             </div>
         </div>
     </footer>
@@ -206,5 +219,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/port.js"></script>
+    <script type="text/javascript" src="js/loginCheck.js"></script>
 </body>
 </html>

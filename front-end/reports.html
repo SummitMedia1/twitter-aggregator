@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <main>
+        <nav id="content" class="pin-top">
+            <div class="nav-wrapper">
+                <ul id="nav-mobile">
+                    <li><a class="btn btn-floating pulse" href="./index.html"><i class="material-icons">menu</i></a>
+                    </li>
+                    <li>
+                        <h5>Home</h5>
+                        <hr>
+                    </li>
+                    <li>
+                        <input class="right" type="text" ng-model="dummyInputs.inputFieldInput" length="150" placeholder="Search"> </li>
+                    <li><a href="#!" class="btn waves-effect waves-purple">Send</a>
+                    </li>
+                    <div class="buttons col 12 right">
+                        <div>
+                            <a href="./login.html" id="logNavBtn" class="btn btn-small waves-effect waves-purple">Login</a>
+                            <a href="./signup.html" id="signNavBtn" class="btn btn-small waves-effect waves-purple">Sign-up</a>
+                </ul>
+                </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center">
+                    <h3>Reports</h3>
+                </div>
+                <!-- Push for loop of data to div under this text -->
+                <!-- Example -->
+                <div class="col s12 box" style="padding: 20px">
+                    <h5>Search Creteria: <span class="inputgoeshere">data.Search_Creteria</span></h5>
+                    <h5>Created on: <span class="inputgoeshere">data.Created_on</span></h5>
+                    <h5>User Name: <span class="inputgoeshere">data.User_Name</span></h5>
+                    <h5>Screen Name: <span class="inputgoeshere">data.Screen_Name</span></h5>
+                    <h5>User Id: <span class="inputgoeshere">data.User_Id</span></h5>
+                    <h5>Tweet Id: <span class="inputgoeshere">data.Tweet_Id</span></h5>
+                    <h5>Tweet Text: <span class="inputgoeshere">data.Tweet_Text</span></h5>
+                    <h5>Time Zone: <span class="inputgoeshere">data.Time_Zone</span></h5>
+                    <h5>Location: <span class="inputgoeshere">data.Location</span></h5>
+                    <h5>Followers: <span class="inputgoeshere">data.Followers</span></h5>
+                    <h5>Likes: <span class="inputgoeshere">data.Likes</span></h5>
+                    <h5>Statuses: <span class="inputgoeshere">data.Statuses</span></h5>
+                    <h5>Quote Count: <span class="inputgoeshere">data.Quote_Count</span></h5>
+                    <h5>Language: <span class="inputgoeshere">data.Language</span></h5>
+                    <h5>Hashtags: <span class="inputgoeshere">data.Hashtag</span></h5>
+                    <h5>Positve Word Count: <span class="inputgoeshere">data.Positve_Word_Count</span></h5>
+                    <h5>Negative Word Count: <span class="inputgoeshere">data.Negative_Word_Count</span></h5>
+                    <h5>Neutral Word Count: <span class="inputgoeshere">data.Neutral_Word_Count</span></h5>
+                    <h5>Blank Word Count: <span class="inputgoeshere">data.Blank Word_Count</span></h5>
+                </div>
+                <!-- Buttons -->
+                <div class='col s12'>
+                    <br>
+                    <br>
+                    <div class='row'>
+
+                        <div class='col s6 center'>
+                            <a href="#" id="previous" class="btn btn-small waves-purple">Previous</a>
+                        </div>
+
+                        <div class='col s6 center'>
+                            <a href="#" id="next" class="btn btn-small waves-purple">Next</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Charts -->
+                <div class='col s12'>
+                    <br>
+                    <div class='row'>
+
+                        <div class='col s4'>
+                            <canvas id='myChart'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart2'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart3'></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class='col s12'>
+                    <div class='row'>
+
+                        <div class='col s4'>
+                            <canvas id='myChart4'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart5'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart6'></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Curiosity</h5>
+                    <p class="grey-text text-lighten-4">Search anything you are curious about!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">More</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="./signup.html">Become a Subscriber</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./reports.html">Reports</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./advanced.html">Advanced Search</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./about.html">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright
+                <div class="row" style="margin-top: 20px">
+                  <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
+                  </a>
+
+                  <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
+                  </a>
+
+                  <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
+                  </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="js/port.js"></script>
+    <script type="text/javascript" src="js/loginCheck.js"></script>
+</body>
+
+</html>
