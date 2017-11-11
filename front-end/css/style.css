@@ -185,4 +185,7 @@ nav {
 img#logoImage {
   width: 100% !important;
 }
+
+#myChart3 {
+  height: 300px;
 }

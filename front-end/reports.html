@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Twitter Aggregator</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -11,6 +12,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 
 <body>
@@ -32,6 +34,7 @@
                         <div>
                             <a href="./login.html" id="logNavBtn" class="btn btn-small waves-effect waves-purple">Login</a>
                             <a href="./signup.html" id="signNavBtn" class="btn btn-small waves-effect waves-purple">Sign-up</a>
+                          </div>
                 </ul>
                 </div>
         </nav>
@@ -45,28 +48,24 @@
                 <div class="col s12 center">
                     <h3>Reports</h3>
                 </div>
-                <!-- Push for loop of data to div under this text -->
+                <!-- text for loop of data to div under this text -->
                 <!-- Example -->
-                <div class="col s12 box" style="padding: 20px">
-                    <h5>Search Creteria: <span class="inputgoeshere">data.Search_Creteria</span></h5>
-                    <h5>Created on: <span class="inputgoeshere">data.Created_on</span></h5>
-                    <h5>User Name: <span class="inputgoeshere">data.User_Name</span></h5>
-                    <h5>Screen Name: <span class="inputgoeshere">data.Screen_Name</span></h5>
-                    <h5>User Id: <span class="inputgoeshere">data.User_Id</span></h5>
-                    <h5>Tweet Id: <span class="inputgoeshere">data.Tweet_Id</span></h5>
-                    <h5>Tweet Text: <span class="inputgoeshere">data.Tweet_Text</span></h5>
-                    <h5>Time Zone: <span class="inputgoeshere">data.Time_Zone</span></h5>
-                    <h5>Location: <span class="inputgoeshere">data.Location</span></h5>
-                    <h5>Followers: <span class="inputgoeshere">data.Followers</span></h5>
-                    <h5>Likes: <span class="inputgoeshere">data.Likes</span></h5>
-                    <h5>Statuses: <span class="inputgoeshere">data.Statuses</span></h5>
-                    <h5>Quote Count: <span class="inputgoeshere">data.Quote_Count</span></h5>
-                    <h5>Language: <span class="inputgoeshere">data.Language</span></h5>
-                    <h5>Hashtags: <span class="inputgoeshere">data.Hashtag</span></h5>
-                    <h5>Positve Word Count: <span class="inputgoeshere">data.Positve_Word_Count</span></h5>
-                    <h5>Negative Word Count: <span class="inputgoeshere">data.Negative_Word_Count</span></h5>
-                    <h5>Neutral Word Count: <span class="inputgoeshere">data.Neutral_Word_Count</span></h5>
-                    <h5>Blank Word Count: <span class="inputgoeshere">data.Blank Word_Count</span></h5>
+                <div class="col s12 box" id="dataGoesHere" style="padding: 20px">
+                    <h5>Search Criteria: <span id="seachCriteriaInput">Tax</span></h5>
+                    <h5>Created on: <span id="createdOnInput">Fri Nov 10 22:24:52 +0000 2017</span></h5>
+                    <h5>User Name: <span id="userNameInput">Denise Saluck</span></h5>
+                    <h5>Screen Name: <span id="screenNameInput">MommasGotGuns</span></h5>
+                    <h5>User Id: <span id="userIdInput">929112648733679600</span></h5>
+                    <h5>Tweet Id: <span id="tweetIdInput">"929112648733679617"</span></h5>
+                    <h5>Tweet Text: <span id="tweetTextInput">"RT @mitchellvii: The Trump stock rally has been the single<br />greatest wealth creation event in US History.  #MitchMcConnell would risk… "</span></h5>
+                    <h5>Time Zone: <span id="timeZoneInput">null</span></h5>
+                    <h5>Location: <span id="locationInput">Central, VA</span></h5>
+                    <h5>Followers: <span id="followersInput">1226</span></h5>
+                    <h5>Likes: <span id="likesInput">5577</span></h5>
+                    <h5>Language: <span id="language">en</span></h5>
+                    <h5>Statuses: <span id="statusesInput">3100</span></h5>
+                    <h5>Quote Count: <span id="quoteCountInput">0</span></h5>
+                    <h5>Hashtags: <span id="hashtagInput">#MitchMcConnell</span></h5>
                 </div>
                 <!-- Buttons -->
                 <div class='col s12'>
@@ -119,8 +118,7 @@
                     </div>
                 </div>
             </div>
-
-        </div>
+          </div>
     </main>
 
     <footer class="page-footer">
@@ -172,6 +170,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script type="text/javascript" src="js/port.js"></script>
     <script type="text/javascript" src="js/loginCheck.js"></script>
-</body>
 
+</body>
 </html>

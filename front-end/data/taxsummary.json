@@ -1,0 +1,12 @@
+{
+  "female_Tweeters": 32,
+  "male_Tweeters": 37,
+  "unidentified_Tweeters": 60,
+  "tweets_Processed": 76,
+  "tweet_Not_Processed": 53,
+  "total_Tweeters": 129,
+  "time_to_Read_Tweets": 17.902,
+  "total_Positive_Words": 46,
+  "total_Negative_Words": 22,
+  "total_Nuetral_Words": 2373
+}

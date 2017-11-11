@@ -15,7 +15,7 @@ var options = [
       	 $(".fadein").fadeIn(500);
       }}, {selector: '.advancedrow', offset: 200, callback: function(el) {
          Materialize.showStaggeredList($(el));
-      }}  
+      }}
     ];
     Materialize.scrollFire(options);
 });
@@ -42,10 +42,10 @@ var myChart = document.getElementById('myChart').getContext('2d');
               datasets:[{
                 label:'Tweets',
                 data:[
-                    2,
-                    3,
-                    1,
-                
+                    37,
+                    32,
+                    60,
+
                   ],
                   backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -97,9 +97,9 @@ var myChart = document.getElementById('myChart').getContext('2d');
               datasets:[{
                 label:'Tweets',
                 data:[
-                    600158,
-                    416427,
-                    325078,
+                    46,
+                    22,
+                    2373,
                   ],
                   backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -145,16 +145,16 @@ var myChart = document.getElementById('myChart').getContext('2d');
         });
 
         var coloPopChart = new Chart(myChart3, {
-            type:'horizontalBar',
+            type:'bar',
             data:{
-              labels:['Total Tweets', '', '', 'Criteria in Text'],
+              labels:['24hr Tweets','1hr', '1min', 'Criteria in Text'],
               datasets:[{
                 label:'Tweets',
                 data:[
-                    600158,
-                    0,
-                    0,
-                    143986,
+                    608400,
+                    25200,
+                    420,
+                    129,
                   ],
                   backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -174,7 +174,7 @@ var myChart = document.getElementById('myChart').getContext('2d');
             options:{
               title:{
                 display:true,
-                text:'Total Tweets',
+                text:'# of Tweets',
                 fontSize:25
               },
               legend:{
@@ -189,7 +189,8 @@ var myChart = document.getElementById('myChart').getContext('2d');
                   left:50,
                   right:0,
                   bottom:0,
-                  top:0
+                  top:0,
+                  height: 300
                 }
               },
               tooltips:{
@@ -208,10 +209,7 @@ var myChart = document.getElementById('myChart').getContext('2d');
                 data:[
                     600158,
                     416427,
-                    325078,
-                    143986,
-                    142980,
-                    118772
+                    325078
                   ],
                   backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -231,7 +229,7 @@ var myChart = document.getElementById('myChart').getContext('2d');
             options:{
               title:{
                 display:true,
-                text:'Largest Cities In Colorado',
+                text:'Tweets New || Retweets || Likes',
                 fontSize:25
               },
               legend:{
@@ -257,18 +255,15 @@ var myChart = document.getElementById('myChart').getContext('2d');
         });
 
         var coloPopChart = new Chart(myChart5, {
-            type:'doughnut',
+            type:'bar',
             data:{
-              labels:['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton'],
+              labels:['500 - 1000+', '300 - 500', '0 - 300'],
               datasets:[{
                 label:'Population',
                 data:[
-                    600158,
-                    416427,
-                    325078,
-                    143986,
-                    142980,
-                    118772
+                    1000,
+                    500,
+                    200
                   ],
                   backgroundColor:[
                   'rgba(255, 99, 132, 0.6)',
@@ -288,7 +283,7 @@ var myChart = document.getElementById('myChart').getContext('2d');
             options:{
               title:{
                 display:true,
-                text:'Largest Cities In Colorado',
+                text:'Followers & Influencers',
                 fontSize:25
               },
               legend:{
@@ -314,9 +309,9 @@ var myChart = document.getElementById('myChart').getContext('2d');
         });
 
         var coloPopChart = new Chart(myChart6, {
-            type:'doughnut',
+            type:'bar',
             data:{
-              labels:['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton'],
+              labels:['Central tz', 'Eastern tz', 'Western tz', 'Europe', 'Asia', 'Australia'],
               datasets:[{
                 label:'Population',
                 data:[
@@ -345,7 +340,7 @@ var myChart = document.getElementById('myChart').getContext('2d');
             options:{
               title:{
                 display:true,
-                text:'Largest Cities In Colorado',
+                text:'Places',
                 fontSize:25
               },
               legend:{
@@ -369,5 +364,3 @@ var myChart = document.getElementById('myChart').getContext('2d');
             }
 
         });
-
-  
