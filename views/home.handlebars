@@ -1,0 +1,495 @@
+<h5><b>Search Creteria: </b><span class="inputgoeshere">{{tweet.search_Creteria}}</span></h5>
+<h5><b>Created on: </b><span class="inputgoeshere">{{tweet.created_On}}</span></h5>
+<h5><b>User Name: </b><span class="inputgoeshere">{{tweet.user_Name}}</span></h5>
+{{!-- <h5><b>Screen Name: </b><span class="inputgoeshere">{{data.Screen_Name}}</span></h5> --}}
+<h5><b>User Id: </b><span class="inputgoeshere">{{tweet.user_Id}}</span></h5>
+<h5><b>Tweet Id: </b><span class="inputgoeshere">{{tweet.tweet_Id}}</span></h5>
+<h5><b>Tweet Text: </b><span class="inputgoeshere">{{tweet.tweet_Text}}</span></h5>
+<h5><b>Time Zone: </b><span class="inputgoeshere">{{tweet.time_Zone}}</span></h5>
+<h5><b>Location: </b><span class="inputgoeshere">{{tweet.location}}</span></h5>
+<h5><b>Followers: </b><span class="inputgoeshere">{{tweet.followers}}</span></h5>
+<h5><b>Likes: </b><span class="inputgoeshere">{{tweet.likes}}</span></h5>
+<h5><b>Statuses: </b><span class="inputgoeshere">{{tweet.statuses}}</span></h5>
+<h5><b>Quote Count: </b><span class="inputgoeshere">{{tweet.quote_Count}}</span></h5>
+<h5><b>Language: </b><span class="inputgoeshere">{{tweet.language}}</span></h5>
+<h5><b>Hashtags: </b><span class="inputgoeshere">{{tweet.hashtag}}</span></h5>
+</div>
+                <!-- Buttons -->
+                <div class='col s12'>
+                    <br>
+                    <br>
+                    <div class='row'>
+
+                        <div class='col s6 center'>
+                            <a id="previous" class="btn btn-small waves-purple">Previous</a>
+                        </div>
+
+                        <div class='col s6 center'>
+                            <a id="next" class="btn btn-small waves-purple">Next</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Charts -->
+                <div class='col s12'>
+                    <br>
+                    <div class='row'>
+
+                        <div class='col s4'>
+                            <canvas id='myChart'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart2'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart3'></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class='col s12'>
+                    <div class='row'>
+
+                        <div class='col s4'>
+                            <canvas id='myChart4'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart5'></canvas>
+                        </div>
+
+                        <div class='col s4'>
+                            <canvas id='myChart6'></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Curiosity</h5>
+                    <p class="grey-text text-lighten-4">Search anything you are curious about!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">More</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="./signup.html">Become a Subscriber</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./reports.html">Reports</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./advanced.html">Advanced Search</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="./about.html">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+
+                © 2014 Copyright
+                <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
+                </a>
+                <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
+                </a>
+                <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
+                </a>
+
+                <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
+                </a>
+
+                <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
+                </a>
+
+                <div class="row" style="margin-top: 20px">
+                  <a class="right social" href="http://facebook.com"><img src="icons/Facebook.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://youtube.com"><img src="icons/YouTube.png" alt="GitHub Icon">
+                  </a>
+                  <a class="right social" href="http://github.com"><img src="icons/github.png" alt="GitHub Icon">
+                  </a>
+
+                  <a class="right social" href="http://twitter.com"><img src="icons/Twitter.png" alt="GitHub Icon">
+                  </a>
+
+                  <a class="right social" href="http://Instagram.com"><img src="icons/Instagram.png" alt="GitHub Icon">
+                  </a>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="js/port.js"></script>
+    <script type="text/javascript" src="js/loginCheck.js"></script>
+
+    <script type="text/javascript">
+    	var myChart = document.getElementById('myChart').getContext('2d');
+        var myChart2 = document.getElementById('myChart2').getContext('2d');
+        var myChart3 = document.getElementById('myChart3').getContext('2d');
+        var myChart4 = document.getElementById('myChart4').getContext('2d');
+        var myChart5 = document.getElementById('myChart5').getContext('2d');
+        var myChart6 = document.getElementById('myChart6').getContext('2d');
+
+        // Global Options
+
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+
+        var coloPopChart = new Chart(myChart, {
+            type:'pie',
+            data:{
+              labels:['Male','Female', 'Unidentified'],
+              datasets:[{
+                label:'Tweets',
+                data:[
+                    {{table.male_Tweeters}},{{table.female_Tweeters}},{{table.unidentified_Tweeters}}
+                  ],
+                  backgroundColor:[
+                  'rgba(255, 99, 132, 0.6)',
+                  'rgba(54, 132, 235, 0.6)',
+                  'rgba(255, 206, 86, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(153, 102, 255, 0.6)',
+                  'rgba(255, 159, 64, 0.6)'
+
+                  ],
+                  borderWidth:1,
+                  borderColor:'#777',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'#000'
+               }]
+            },
+            options:{
+              title:{
+                display:true,
+                text:'Male || Female || Unidentified ',
+                fontSize:25
+              },
+              legend:{
+                display:false,
+                position:'right',
+                labels:{
+                  fontColor:'#000'
+                }
+              },
+              layout:{
+                padding:{
+                  left:50,
+                  right:0,
+                  bottom:0,
+                  top:0
+                }
+              },
+              tooltips:{
+                enabled:true
+              }
+            }
+
+        });
+
+        var coloPopChart = new Chart(myChart2, {
+            type:'pie',
+            data:{
+              labels:['Positive', 'Negative', 'Neutral'],
+              datasets:[{
+                label:'Tweets',
+                data:[
+                    {{table.total_Positive_Words}},{{table.total_Negative_Words}},{{table.total_Nuetral_Words}}
+                  ],
+                  backgroundColor:[
+                  'rgba(255, 99, 132, 0.6)',
+                  'rgba(54, 132, 235, 0.6)',
+                  'rgba(255, 206, 86, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(153, 102, 255, 0.6)',
+                  'rgba(255, 159, 64, 0.6)'
+
+                  ],
+                  borderWidth:1,
+                  borderColor:'#777',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'#000'
+               }]
+            },
+            options:{
+              title:{
+                display:true,
+                text:'Positive || Negative || Neutral ',
+                fontSize:25
+              },
+              legend:{
+                display:false,
+                position:'right',
+                labels:{
+                  fontColor:'#000'
+                }
+              },
+              layout:{
+                padding:{
+                  left:50,
+                  right:0,
+                  bottom:0,
+                  top:0
+                }
+              },
+              tooltips:{
+                enabled:true
+              }
+            }
+
+        });
+
+        var coloPopChart = new Chart(myChart3, {
+            type:'bar',
+            data:{
+              labels:['Criteria','1min', '1hr','24hr'],
+              datasets:[{
+                label:'# of Tweets',
+                data:[
+                    ({{table.total_Tweeters}} ),
+                    (({{table.total_Tweeters}}/{{table.time_to_Read_Tweets}})*60),
+                    ((({{table.total_Tweeters}}/{{table.time_to_Read_Tweets}})*60)*60),
+                    (((({{table.total_Tweeters}}/{{table.time_to_Read_Tweets}})*60)*60)*24),
+                  ],
+                  backgroundColor:[
+                  'rgba(255, 99, 132, 0.6)',
+                  'rgba(54, 132, 235, 0.6)',
+                  'rgba(255, 206, 86, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(153, 102, 255, 0.6)',
+                  'rgba(255, 159, 64, 0.6)'
+
+                  ],
+                  borderWidth:1,
+                  borderColor:'#777',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'#000'
+               }]
+            },
+            options:{
+              title:{
+                display:true,
+                text:'Total Tweets in '+ {{table.time_to_Read_Tweets}}+ ' sec.',
+                fontSize:25
+              },
+              legend:{
+                display:false,
+                position:'right',
+                labels:{
+                  fontColor:'#000'
+                }
+              },
+              layout:{
+                padding:{
+                  left:50,
+                  right:0,
+                  bottom:0,
+                  top:0
+                }
+              },
+              tooltips:{
+                enabled:true
+              }
+            }
+
+        });
+
+        // var coloPopChart = new Chart(myChart4, {
+        //     type:'doughnut',
+        //     data:{
+        //       labels:['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton'],
+        //       datasets:[{
+        //         label:'Population',
+        //         data:[
+        //             600158,
+        //             416427,
+        //             325078,
+        //             143986,
+        //             142980,
+        //             118772
+        //           ],
+        //           backgroundColor:[
+        //           'rgba(255, 99, 132, 0.6)',
+        //           'rgba(54, 132, 235, 0.6)',
+        //           'rgba(255, 206, 86, 0.6)',
+        //           'rgba(75, 192, 192, 0.6)',
+        //           'rgba(153, 102, 255, 0.6)',
+        //           'rgba(255, 159, 64, 0.6)'
+
+        //           ],
+        //           borderWidth:1,
+        //           borderColor:'#777',
+        //           hoverBorderWidth:3,
+        //           hoverBorderColor:'#000'
+        //        }]
+        //     },
+        //     options:{
+        //       title:{
+        //         display:true,
+        //         text:'Largest Cities In Colorado',
+        //         fontSize:25
+        //       },
+        //       legend:{
+        //         display:false,
+        //         position:'right',
+        //         labels:{
+        //           fontColor:'#000'
+        //         }
+        //       },
+        //       layout:{
+        //         padding:{
+        //           left:50,
+        //           right:0,
+        //           bottom:0,
+        //           top:0
+        //         }
+        //       },
+        //       tooltips:{
+        //         enabled:true
+        //       }
+        //     }
+
+        // });
+
+        // var coloPopChart = new Chart(myChart5, {
+        //     type:'doughnut',
+        //     data:{
+        //       labels:['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton'],
+        //       datasets:[{
+        //         label:'Population',
+        //         data:[
+        //             600158,
+        //             416427,
+        //             325078,
+        //             143986,
+        //             142980,
+        //             118772
+        //           ],
+        //           backgroundColor:[
+        //           'rgba(255, 99, 132, 0.6)',
+        //           'rgba(54, 132, 235, 0.6)',
+        //           'rgba(255, 206, 86, 0.6)',
+        //           'rgba(75, 192, 192, 0.6)',
+        //           'rgba(153, 102, 255, 0.6)',
+        //           'rgba(255, 159, 64, 0.6)'
+
+        //           ],
+        //           borderWidth:1,
+        //           borderColor:'#777',
+        //           hoverBorderWidth:3,
+        //           hoverBorderColor:'#000'
+        //        }]
+        //     },
+        //     options:{
+        //       title:{
+        //         display:true,
+        //         text:'Largest Cities In Colorado',
+        //         fontSize:25
+        //       },
+        //       legend:{
+        //         display:false,
+        //         position:'right',
+        //         labels:{
+        //           fontColor:'#000'
+        //         }
+        //       },
+        //       layout:{
+        //         padding:{
+        //           left:50,
+        //           right:0,
+        //           bottom:0,
+        //           top:0
+        //         }
+        //       },
+        //       tooltips:{
+        //         enabled:true
+        //       }
+        //     }
+
+        // });
+
+        // var coloPopChart = new Chart(myChart6, {
+        //     type:'doughnut',
+        //     data:{
+        //       labels:['Denver', 'Colorado Springs', 'Aurora', 'Fort Collins', 'Lakewood', 'Thornton'],
+        //       datasets:[{
+        //         label:'Population',
+        //         data:[
+        //             600158,
+        //             416427,
+        //             325078,
+        //             143986,
+        //             142980,
+        //             118772
+        //           ],
+        //           backgroundColor:[
+        //           'rgba(255, 99, 132, 0.6)',
+        //           'rgba(54, 132, 235, 0.6)',
+        //           'rgba(255, 206, 86, 0.6)',
+        //           'rgba(75, 192, 192, 0.6)',
+        //           'rgba(153, 102, 255, 0.6)',
+        //           'rgba(255, 159, 64, 0.6)'
+
+        //           ],
+        //           borderWidth:1,
+        //           borderColor:'#777',
+        //           hoverBorderWidth:3,
+        //           hoverBorderColor:'#000'
+        //        }]
+        //     },
+        //     options:{
+        //       title:{
+        //         display:true,
+        //         text:'Largest Cities In Colorado',
+        //         fontSize:25
+        //       },
+        //       legend:{
+        //         display:false,
+        //         position:'right',
+        //         labels:{
+        //           fontColor:'#000'
+        //         }
+        //       },
+        //       layout:{
+        //         padding:{
+        //           left:50,
+        //           right:0,
+        //           bottom:0,
+        //           top:0
+        //         }
+        //       },
+        //       tooltips:{
+        //         enabled:true
+        //       }
+        //     }
+
+        // });
+
+  </script>
+    
+    
+</body>
+
+
+</html>
+
+</html>
+
+
+{{!-- <h5><b>Positve Word Count: </b><span class="inputgoeshere">{{data.Positve_Word_Count}}</span></h5>
+<h5><b>Negative Word Count: </b><span class="inputgoeshere">{{data.Negative_Word_Count}}</span></h5>
+<h5><b>Neutral Word Count: </b><span class="inputgoeshere">{{data.Neutral_Word_Count}}</span></h5>
+<h5><b>Blank Word Count: </b><span class="inputgoeshere">{{data.BlankWord_Count}}</span></h5> --}}
