@@ -4,6 +4,8 @@ var exphbs  = require('express-handlebars');
 var data = require("./data/taxcut.js");
 var tabledata = require("./data/taxcutsummary.js");
 
+var mySQL = require('mysql');
+
 var port = process.env.PORT || 8080;
 var app = express();
 
@@ -36,15 +38,15 @@ app.get('/reports', function (req, res, cb) {
 	// } else if ($("#previous").click()){
 	// 	count = count -1;
 	// }
-   
+
 
 });
 app.get("/api", function(req, res){
-	res.json(data.tweetArray[0]);	
+	res.json(data.tweetArray[0]);
 });
 
 app.get("/api/tables", function(req, res){
-	res.json(tabledata.tweetSummary);	
+	res.json(tabledata.tweetSummary);
 });
 
 require("./routes/password-controller.js")(app);

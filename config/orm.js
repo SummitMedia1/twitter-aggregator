@@ -32,16 +32,9 @@ var orm = {
       }
       callBack(result);
     });
-  },
+  }
 
-  insertOne: function(tableInput, vals, callBack) {
-  		connection.query('INSERT INTO '+tableInput+"(user_data) VALUES ('"+vals+"');", function(err, result){
-      if (err) {
-        throw err;
-      }
-			   callBack(result);
-		});
-	}
+};
 
 // Export the orm object
 module.exports = orm;
