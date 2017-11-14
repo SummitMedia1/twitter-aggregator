@@ -1,20 +1,20 @@
 var mySQL = require('mysql');
 
-var connection;
+var connection = mySQL.createConnection(process.env.JAWSDB_URL);
 
-if (process.env.JAWSDB_URL) {
-console.log('using jawsdb');
-    connection = mySQL.createConnection(process.env.JAWSDB_URL);
+// if (process.env.JAWSDB_URL) {
+// console.log('using jawsdb');
+//     connection = mySQL.createConnection(process.env.JAWSDB_URL);
 
-} else {
-  console.log('using localhost');
-    connection = mySQL.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'user_data',
-    });
-}
+// } else {
+//   console.log('using localhost');
+//     connection = mySQL.createConnection({
+//         host: 'localhost',
+//         user: 'root',
+//         password: '',
+//         database: 'user_data',
+//     });
+// }
 
 connection.connect(function(err) {
     if (err) {
