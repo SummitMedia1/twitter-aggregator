@@ -4,8 +4,6 @@ var exphbs  = require('express-handlebars');
 var data = require("./data/taxcut.js");
 var tabledata = require("./data/taxcutsummary.js");
 
-var mySQL = require('mysql');
-
 var port = process.env.PORT || 8080;
 var app = express();
 
